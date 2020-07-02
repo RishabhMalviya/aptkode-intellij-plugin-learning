@@ -1,0 +1,27 @@
+<idea-plugin>
+    <id>org.aptkode.intellij-plugin-learning</id>
+    <name>MyIdeaDemo</name>
+    <version>1.0-SNAPSHOT</version>
+    <vendor email="support@aptkode.com" url="http://www.aptkode.com">aptkode</vendor>
+
+    <description><![CDATA[
+        My demo Idea plugin for actions, messages, and dialogues
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+
+        <applicationService serviceImplementation="org.aptkode.myideademo.MyIdeaDemoPluginSettings"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <group id="MyIdeaDemo.HelloAction" text="MyIdeaDemo" description="about my idea">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <action class="org.aptkode.myideademo.HelloAction" id="MyIdeaDemo.Actions.HelloAction" text="Say Hello"/>
+        </group>
+    </actions>
+</idea-plugin>
